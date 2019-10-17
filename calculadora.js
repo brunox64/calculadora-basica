@@ -1,6 +1,5 @@
 /*
     Autor: Bruno Moreira Mota.
-    Conteudo protegido por diretos autorais.
 */
 
 function setN(e) { 
