@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <!--
+            Autor: Bruno Moreira Mota.
+            Conteudo protegido por diretos autorais.
+        -->
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="calculadora.css" type="text/css" />
+    </head>
+    <body>   
+        <header>
+            <nav>
+                <h2 class="inline-block" style="padding: 0 10px; margin: 0; text-shadow: 1px 1px 0.5px #333;">Calculadora</h2>
+            </nav>
+        </header>
+        <section class="principal">
+            <div>
+                <div class="main">
+                    <div class="caixa-interna">
+                        <div class="borda-visor">
+                            <input type="text" name="visor" id="visor" class="inpu-visor" />
+                        </div>
+                        <div class="borda-buttons">
+                            <div class="grupo-cinco">
+                                <span class="btn" title="Tecla BACKSPACE">
+                                    <input type="button" name="apagar-um" id="apagar-um" value="&lArr;" />
+                                </span>
+                                <span class="btn" title="Tecla DEL">
+                                    <input type="button" name="ce" id="ce" value="CE" />
+                                </span>
+                                <span class="btn" title="Tecla ESC">
+                                    <input type="button" name="apagar" id="apagar" value="C" />
+                                </span>
+                                <span class="btn">
+                                    <input type="button" name="maismenos" id="maismenos" value="&#xB1;" />
+                                </span>
+                                <span class="btn">
+                                    <input type="button" name="raiz" id="raiz" value="&#8730;" />
+                                </span>
+                            </div>
+                            <div class="grupo-cinco">
+                                <span class="btn" title="Tecla 7">
+                                    <input type="button" class="claro" name="n7" id="n7" value="7" />
+                                </span>
+                                <span class="btn" title="Tecla 8">
+                                    <input type="button" class="claro" name="n8" id="n8" value="8" />
+                                </span>
+                                <span class="btn" title="Tecla 9">
+                                    <input type="button" class="claro" name="n9" id="n9" value="9" />
+                                </span>
+                                <span class="btn" title="Tecla /">
+                                    <input type="button" name="dividir" id="dividir" value="/" />
+                                </span>
+                                <span class="btn" title="Porcentagem">
+                                    <input type="button" name="porcentagem" id="porcentagem" value="%" />
+                                </span>
+                            </div>
+                            <div class="grupo-cinco">
+                                <span class="btn" title="Tecla 4">
+                                    <input type="button" class="claro" name="n4" id="n4" value="4" />
+                                </span>
+                                <span class="btn" title="Tecla 5">
+                                    <input type="button" class="claro" name="n5" id="n5" value="5" />
+                                </span>
+                                <span class="btn" title="Tecla 6">
+                                    <input type="button" class="claro" name="n6" id="n6" value="6" />
+                                </span>
+                                <span class="btn" title="Tecla *">
+                                    <input type="button" name="vezes" id="vezes" value="&#x2217;" />
+                                </span>
+                                <span class="btn">
+                                    <input type="button" name="umbx" id="umbx" value="1/x" />
+                                </span>
+                            </div>
+                            <div class="grupo-igual" title="Tecla ENTER">
+                                <span class="btn">
+                                    <input type="button" name="igual" id="igual" value="&#x0003D;" />
+                                </span>
+                            </div>
+                            <div class="grupo-quatro">
+                                <span class="btn" title="Tecla 1">
+                                    <input type="button" class="claro" name="n1" id="n1" value="1" />
+                                </span>
+                                <span class="btn" title="Tecla 2">
+                                    <input type="button" class="claro" name="n2" id="n2" value="2" />
+                                </span>
+                                <span class="btn" title="Tecla 3">
+                                    <input type="button" class="claro" name="n3" id="n3" value="3" />
+                                </span>
+                                <span class="btn" title="Tecla -">
+                                    <input type="button" name="menos" id="menos" value="&#x02212;" />
+                                </span>
+                            </div>
+                            <div class="grupo-trez">
+                                <span class="btn" title="Tecla 0">
+                                    <input type="button" class="claro" name="n0" id="n0" value="0" />
+                                </span>
+                                <span class="btn" title="Tecla ,">
+                                    <input type="button" class="claro" name="virgula" id="virgula" value="," />
+                                </span>
+                                <span class="btn" title="Tecla +">
+                                    <input type="button" name="mais" id="mais" value="&#x0002B;" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-res">
+                    <table>
+                        <tbody id="historico">
+                            <tr id="soma-hist">
+                                <td>
+                                    <label>Soma dos Resultados</label>
+                                </td>
+                                <td>
+                                    <label id="total">0,00</label>
+                                    <input type='hidden' id='soma_total' name='soma_total' value='0,00' />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </section>
+        <footer>
+            <hgroup class="sub-footer">
+                <h5 class="title-footer">Copyright by Bruno Moreira Mota. Sugestões no Email: brunox64@outlook.com .</h5>
+            </hgroup>
+        </footer>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!--<script src="jquery.validate.min.js"></script>-->
+        <!--<script src="additional-methods.min.js"></script>-->
+        <script type="text/javascript" src="calculadora.js"></script>
+        <script type="text/javascript">
+            window.onbeforeunload = function () {
+                return "Se você atualizar esta pagina perderá os dados.";
+            }
+        </script>
+    </body>
+</html>
